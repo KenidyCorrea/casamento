@@ -41,14 +41,14 @@ export default function Gallery() {
   return (
     <section id="galeria" className="section">
       <h2 className="section-title">Galeria de Fotos</h2>
-      <p className="section-subtitle">Momentos especiais capturados</p>
+      <p className="section-subtitle">Fotos registradas do local</p>
 
       <div className="mt-8 relative max-w-2xl mx-auto">
         {/* Container da imagem */}
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted">
           <img
             src={photos[currentIndex]}
-            alt={`Foto do casal ${currentIndex + 1}`}
+            alt={`${currentIndex + 1}`}
             className="w-full h-full object-cover transition-opacity duration-500"
           />
 
