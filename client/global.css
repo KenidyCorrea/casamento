@@ -1,0 +1,145 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   */
+  :root {
+    /* Core palette: Lavender + soft gold details */
+    --background: 0 0% 100%;
+    --foreground: 248 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 248 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 248 15% 15%;
+
+    /* Primary (darker lavender for strong contrast on buttons) */
+    --primary: 262 45% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary / surfaces */
+    --secondary: 260 30% 96%;
+    --secondary-foreground: 262 35% 28%;
+
+    /* Muted text + surfaces */
+    --muted: 260 30% 96%;
+    --muted-foreground: 263 18% 38%;
+
+    /* Accent uses the base lavender (#BFA9E3) */
+    --accent: 263 51% 77%;
+    --accent-foreground: 262 35% 28%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 20% 90%;
+    --input: 260 20% 90%;
+    --ring: 262 45% 55%;
+
+    /* Brand detail: soft gold */
+    --gold: 43 60% 62%;
+    --gold-foreground: 248 15% 15%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar (kept consistent) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 262 45% 55%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 260 30% 96%;
+    --sidebar-accent-foreground: 262 35% 28%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 248 20% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 248 22% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 248 22% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 45% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 262 23% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 262 23% 16%;
+    --muted-foreground: 260 15% 70%;
+
+    --accent: 263 51% 72%;
+    --accent-foreground: 248 20% 12%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 262 20% 18%;
+    --input: 262 20% 18%;
+    --ring: 262 45% 60%;
+
+    --gold: 43 60% 58%;
+    --gold-foreground: 0 0% 10%;
+
+    --sidebar-background: 248 22% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 262 45% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 262 23% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 262 20% 18%;
+    --sidebar-ring: 262 45% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: Poppins, ui-sans-serif, system-ui, -apple-system, Segoe UI,
+      Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    letter-spacing: 0.01em;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+  .btn-gold:hover { filter: brightness(0.97); }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-semibold tracking-tight text-foreground;
+  }
+  .section-subtitle {
+    @apply text-muted-foreground mt-2;
+  }
+}
