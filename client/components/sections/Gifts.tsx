@@ -34,7 +34,7 @@ export default function Gifts() {
                 <h3 className="font-display text-2xl">Lista de presentes</h3>
                 <p className="text-muted-foreground mt-1">Escolha um item com carinho em nossa lista.</p>
                 <Button asChild size="lg" className="mt-5">
-                  <a href="https://lista.havan.com.br/Convidado/ItensListaPresente/854757" target="_blank" rel="noreferrer">Abrir lista</a>
+                  <a href="https://www.querodecasamento.com.br/lista-de-casamento/beatriz-kenidy" target="_blank" rel="noreferrer">Abrir lista</a>
                 </Button>
               </div>
             </div>
