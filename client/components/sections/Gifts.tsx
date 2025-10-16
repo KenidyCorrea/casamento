@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Gift, CreditCard, MapPin, Info } from "lucide-react";
 
-const PIX_KEY = "kenidycorrea37@gmail.com";
+const PIX_KEY = "(16) 99972-3847";
 const PIX_TITULAR = "Kenidy Jacintho Corrêa";
-const PIX_INST = "MERCADO PAGO IP LTDA";
-const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=${encodeURIComponent(PIX_KEY)}`;
+const PIX_INST = "PICPAY";
+const PIX_QR = '00020126360014br.gov.bcb.pix0114+55169997238475204000053039865802BR5922KENIDY JACINTHO CORREA6009Sao Paulo62290525REC68F04651C084F3216584906304491D'
+const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=${encodeURIComponent(PIX_QR)}`;
 
 export default function Gifts() {
   const [copied, setCopied] = useState(false);
@@ -75,7 +76,7 @@ export default function Gifts() {
             <div>
               <h3 className="font-display text-xl">Presentes físicos</h3>
               <p className="text-muted-foreground text-sm">Se preferir enviar algo físico, utilize o endereço abaixo.</p>
-              <address className="not-italic mt-2">Rua Bruno Cilurzo, 1550 — São Paulo, SP</address>
+              <address className="not-italic mt-2">Rua Bruno Cilurzo, 1550 — Franca, SP</address>
             </div>
           </div>
         </div>
