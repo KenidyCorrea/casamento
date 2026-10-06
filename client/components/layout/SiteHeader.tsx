@@ -30,9 +30,9 @@ export default function SiteHeader() {
     },
     {
       label: "Como chegar",
-      path: "/local",
+      action: () => navigate("/#local"),
       icon: MapPin,
-      isActive: pathname === "/local"
+      isActive: false
     },
     {
       label: "Presentes",
@@ -56,9 +56,8 @@ export default function SiteHeader() {
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 z-50" onClick={closeMenu}>
-          <img src="/bk.png" alt="Monograma Beatriz & Kenidy" className="h-9 w-9 object-contain" />
           <span className="font-display text-xl md:text-2xl tracking-tight">
-            Beatriz <span className="mx-1">&</span> Kenidy
+            Júlia <span className="mx-1">&</span> Wesley
           </span>
         </Link>
 

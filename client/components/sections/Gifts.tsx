@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Gift, CreditCard, MapPin, Info } from "lucide-react";
 
-const PIX_KEY = "(16) 99972-3847";
-const PIX_TITULAR = "Kenidy Jacintho Corrêa";
-const PIX_INST = "PICPAY";
-const PIX_QR = '00020126360014br.gov.bcb.pix0114+55169997238475204000053039865802BR5922KENIDY JACINTHO CORREA6009Sao Paulo62290525REC68F04651C084F3216584906304491D'
+const PIX_KEY = "(16) 99173-0717";
+const PIX_TITULAR = "Julia Soares Rosa";
+const PIX_INST = "Nu Pagamentos - IP";
+const PIX_QR = '00020126330014BR.GOV.BCB.PIX0111443711828605204000053039865802BR5917Julia Soares Rosa6009SAO PAULO621405103jGSz0qDVn6304D472'
 const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=${encodeURIComponent(PIX_QR)}`;
 
 export default function Gifts() {
@@ -35,7 +35,7 @@ export default function Gifts() {
                 <h3 className="font-display text-2xl">Lista de presentes</h3>
                 <p className="text-muted-foreground mt-1">Escolha um item com carinho em nossa lista.</p>
                 <Button asChild size="lg" className="mt-5">
-                  <a href="https://www.querodecasamento.com.br/lista-de-casamento/beatriz-kenidy" target="_blank" rel="noreferrer">Abrir lista</a>
+                  <a href="https://www.querodecasamento.com.br/lista-de-casamento/julia-soares--wesley-novais" target="_blank" rel="noreferrer">Abrir lista</a>
                 </Button>
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function Gifts() {
             <div>
               <h3 className="font-display text-xl">Presentes físicos</h3>
               <p className="text-muted-foreground text-sm">Se preferir enviar algo físico, utilize o endereço abaixo.</p>
-              <address className="not-italic mt-2">Rua Bruno Cilurzo, 1550 — Franca, SP</address>
+              <address className="not-italic mt-2">Rua Cícero Dias 1191, Recreio Campo Belo, Franca - SP, 14409-438</address>
             </div>
           </div>
         </div>

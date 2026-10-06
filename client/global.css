@@ -11,54 +11,53 @@
    * tailwind.config.ts expects the following color variables to be expressed as HSL values.
    */
   :root {
-    /* Core palette: Lavender + soft gold details */
-    --background: 0 0% 100%;
-    --foreground: 248 15% 15%;
+    /* Core palette: beige canvas with moss-green interface elements */
+    --background: 43 43% 89%;
+    --foreground: 91 25% 29%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 248 15% 15%;
+    --card: 43 43% 89%;
+    --card-foreground: 91 25% 29%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 248 15% 15%;
+    --popover: 43 43% 89%;
+    --popover-foreground: 91 25% 29%;
 
-    /* Primary (darker lavender for strong contrast on buttons) */
-    --primary: 262 45% 55%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary: moss green */
+    --primary: 91 25% 29%;
+    --primary-foreground: 43 43% 89%;
 
     /* Secondary / surfaces */
-    --secondary: 260 30% 96%;
-    --secondary-foreground: 262 35% 28%;
+    --secondary: 43 35% 84%;
+    --secondary-foreground: 91 25% 29%;
 
     /* Muted text + surfaces */
-    --muted: 260 30% 96%;
-    --muted-foreground: 263 18% 38%;
+    --muted: 43 34% 84%;
+    --muted-foreground: 91 19% 35%;
 
-    /* Accent uses the base lavender (#BFA9E3) */
-    --accent: 263 51% 77%;
-    --accent-foreground: 262 35% 28%;
+    /* Accent uses the same moss green for interactive components */
+    --accent: 91 25% 29%;
+    --accent-foreground: 43 43% 89%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 260 20% 90%;
-    --input: 260 20% 90%;
-    --ring: 262 45% 55%;
+    --border: 91 20% 47%;
+    --input: 91 20% 47%;
+    --ring: 91 25% 29%;
 
-    /* Brand detail: soft gold */
-    --gold: 43 60% 62%;
-    --gold-foreground: 248 15% 15%;
+    --gold: 91 25% 29%;
+    --gold-foreground: 43 43% 89%;
 
     --radius: 0.75rem;
 
     /* Sidebar (kept consistent) */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 262 45% 55%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 260 30% 96%;
-    --sidebar-accent-foreground: 262 35% 28%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 43 43% 89%;
+    --sidebar-foreground: 91 25% 29%;
+    --sidebar-primary: 91 25% 29%;
+    --sidebar-primary-foreground: 43 43% 89%;
+    --sidebar-accent: 43 35% 84%;
+    --sidebar-accent-foreground: 91 25% 29%;
+    --sidebar-border: 91 20% 47%;
+    --sidebar-ring: 91 25% 29%;
   }
 
   .dark {
@@ -123,13 +122,20 @@
     font-family: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     letter-spacing: 0.01em;
   }
+
+  .prose {
+    --tw-prose-body: hsl(var(--muted-foreground));
+    --tw-prose-headings: hsl(var(--foreground));
+    --tw-prose-bold: hsl(var(--foreground));
+    --tw-prose-links: hsl(var(--primary));
+  }
 }
 
 @layer components {
   .btn-gold {
     @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
-    background-color: hsl(var(--accent));
-    color: hsl(var(--accent-foreground));
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
   }
   .btn-gold:hover { filter: brightness(0.97); }
 
