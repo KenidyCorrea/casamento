@@ -11,7 +11,7 @@ export default function SiteFooter() {
         <div>
           <h4 className="font-semibold mb-2">Contato</h4>
           <ul className="space-y-1 text-muted-foreground">
-            <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> <a href="https://wa.me/5516999723847" target="_blank" rel="noreferrer">WhatsApp</a></li>
+            <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> <a href="https://wa.me/5516991730717" target="_blank" rel="noreferrer">WhatsApp</a></li>
             <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> <a href="mailto:juliasoaresrosaa1@gmail.com"> juliasoaresrosaa1@gmail.com</a></li>
           </ul>
         </div>
